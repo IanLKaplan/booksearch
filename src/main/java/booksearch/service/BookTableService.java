@@ -57,6 +57,10 @@ public class BookTableService implements IDynamoDBKeys {
     private static DynamoDBService dynamoDBService = null;
     final private Logger log;
     
+    private String getTableName() {
+        return tableName;
+    }
+    
     /**
      * 
      * @param bookTableName the name of the DynamoDB table that stores the book information.
@@ -69,10 +73,6 @@ public class BookTableService implements IDynamoDBKeys {
         }
         // check to see if the book table exists. If it doesn't, create it.
         checkBookTable();
-    }
-    
-    public String getTableName() {
-        return tableName;
     }
 
 

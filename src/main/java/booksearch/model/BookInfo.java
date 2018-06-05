@@ -48,7 +48,7 @@ public class BookInfo {
     private String publisher;
     @Digits(integer=4, fraction=0, message="Please enter a year")
     private String year;
-    @Pattern(regexp="^\\d{0,8}(\\.\\d{1,4})?$", message="Please enter a price e.g., 16, 16.00, 15.95")
+    @Pattern(regexp="^\\d{0,8}(\\.\\d{1,4})?$", message="Please enter a price i.e., 16, 16.00, 15.95")
     private String price;
     
     @DynamoDBHashKey(attributeName="title")
